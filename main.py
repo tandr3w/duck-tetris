@@ -218,12 +218,8 @@ while running:
     draw_piece(screen, tetriminoNum(game.hold), 100, 55, 100, 100)
  
     text_surface = my_font.render(str(game.score), True, (255, 255, 255))
-    text_rect = text_surface.get_rect(center=(s_width // 2 - 100, s_height - 25))
+    text_rect = text_surface.get_rect(center=(s_width // 2, s_height - 25))
     screen.blit(text_surface, text_rect)
- 
-    text_surface2 = my_font.render(str(game.level), True, (255, 255, 255))
-    text_rect2 = text_surface2.get_rect(center=(s_width // 2 + 100, s_height - 25))
-    screen.blit(text_surface2, text_rect2)
  
     next_yposes = [55, 140, 225, 310, 395]
     pygame.draw.rect(screen, (50, 55, 59), (600, next_yposes[0], 80, 80), 5, 5)
