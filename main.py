@@ -140,7 +140,7 @@ while running:
     if action < 10:
         last_duck_show = pygame.time.get_ticks()
         duck_showing = True
-        duckLoc = (randint(0, 700), randint(0, 700))
+        duckLoc = (randint(0, 600), randint(0, 600))
     if action == 1:
         # make duck way bigger
         last_manyducks_show = pygame.time.get_ticks()
