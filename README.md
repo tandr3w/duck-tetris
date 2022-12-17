@@ -1,3 +1,5 @@
+Read: https://docs.google.com/presentation/d/1WlPiXubDLmxTr6A0-2mA-4Ld3zXudpGLxia1NePOV1Q/edit?usp=sharing
+
 Duck Tetris! (Real)
 
 The ultimate tetris practice tool. Play while a duck sabotages you, and practice recovering from tricky positions.
