@@ -2,7 +2,7 @@ Read: https://docs.google.com/presentation/d/1WlPiXubDLmxTr6A0-2mA-4Ld3zXudpGLxi
 
 Duck Tetris! (Real)
 
-The ultimate tetris practice tool. Play while a duck sabotages you, and practice recovering from tricky positions.
+The ultimate Tetris practice tool. Play while a duck sabotages you, and practice recovering from tricky positions.
 
 Run main.py to play.
 
