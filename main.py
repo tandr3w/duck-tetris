@@ -131,7 +131,7 @@ last_manyducks_show = pygame.time.get_ticks()
 duckLoc = 0
 while running:
     screen.fill((20, 10, 12))
-    action = randint(1, 1000)
+    action = randint(1, 5000)
     duck = pygame.transform.scale(pygame.image.load("duck" + str(randint(0, 1)) + ".png"), (300, 300))
     if last_manyducks_show + duck_show_time < pygame.time.get_ticks():
         manyDucks = False
