@@ -137,7 +137,7 @@ while running:
         manyDucks = False
     if last_duck_show + duck_show_time < pygame.time.get_ticks():
         duck_showing = False
-    if action < 10:
+    if action < 9:
         last_duck_show = pygame.time.get_ticks()
         duck_showing = True
         duckLoc = (randint(0, 700), randint(0, 700))
