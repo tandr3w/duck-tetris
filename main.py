@@ -140,7 +140,7 @@ while running:
     if action < 9:
         last_duck_show = pygame.time.get_ticks()
         duck_showing = True
-        duckLoc = (randint(0, 600), randint(0, 600))
+        duckLoc = (randint(100, 600), randint(100, 600))
     if action == 1:
         # make duck way bigger
         last_manyducks_show = pygame.time.get_ticks()
@@ -244,13 +244,12 @@ while running:
     if duck_showing:
         screen.blit(duck, duckLoc)
     if manyDucks:
-        screen.blit(duck, (randint(-700, 700), randint(-700, 700)))
-        screen.blit(duck, (randint(-700, 700), randint(-700, 700)))
-        screen.blit(duck, (randint(-700, 700), randint(-700, 700)))
-        screen.blit(duck, (randint(-700, 700), randint(-700, 700)))
-        screen.blit(duck, (randint(-700, 700), randint(-700, 700)))
-        screen.blit(duck, (randint(-700, 700), randint(-700, 700)))
+        screen.blit(duck, (randint(-600, 600), randint(-600, 600)))
+        screen.blit(duck, (randint(-600, 600), randint(-600, 600)))
+        screen.blit(duck, (randint(-600, 600), randint(-600, 600)))
+        screen.blit(duck, (randint(-600, 600), randint(-600, 600)))
+        screen.blit(duck, (randint(-600, 600), randint(-600, 600)))
+        screen.blit(duck, (randint(-600, 600), randint(-600, 600)))
     pygame.display.flip()
- 
  
 pygame.quit()
