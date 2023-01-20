@@ -1,4 +1,5 @@
-**Duck Tetris! (Real)**
+# Duck Tetris! (Real)
+
 Devpost Submission: https://devpost.com/software/duck-tetris
 
 The ultimate Tetris practice tool. Play while a duck sabotages you, and practice recovering from tricky positions.
