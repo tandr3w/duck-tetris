@@ -5,6 +5,10 @@ import pygame
 import random
 game = tetris.BaseGame()
 board = game.get_playfield().tolist()
+ARR = 0
+DAS = 100
+
+DUCK_SPEED = 2000
  
 # 0: empty
 # 1: line
@@ -118,8 +122,8 @@ def draw_grid(surface, row, col):
  
  
 lasttime = 0
-interval = 50
-interval_init = 170
+interval = ARR
+interval_init = DAS
 pygame.font.init()
 my_font = pygame.font.SysFont(None, 42)
  
@@ -131,7 +135,7 @@ last_manyducks_show = pygame.time.get_ticks()
 duckLoc = 0
 while running:
     screen.fill((20, 10, 12))
-    action = randint(1, 2000)
+    action = randint(1, DUCK_SPEED)
     duck = pygame.transform.scale(pygame.image.load("duck" + str(randint(0, 1)) + ".png"), (300, 300))
     if last_manyducks_show + duck_show_time < pygame.time.get_ticks():
         manyDucks = False
@@ -152,7 +156,7 @@ while running:
             action = randint(4, 9)
         game.hold = None
     elif action == 4:
-        game.level += 3
+        game.level += 1
     elif action == 5:
         game.queue.fill()
     elif action == 6:
@@ -191,22 +195,30 @@ while running:
             if event.key == pygame.K_c:
                 game.swap()
             if event.key == pygame.K_LEFT:
-                interval_init = 170
+                interval_init = DAS
                 game.left()
                 lasttime = pygame.time.get_ticks()
             if event.key == pygame.K_RIGHT:
-                interval_init = 170
+                interval_init = DAS
                 game.right()
                 lasttime = pygame.time.get_ticks()
             if event.key == pygame.K_DOWN:
-                interval_init = 170
+                interval_init = DAS
                 game.soft_drop()
                 lasttime = pygame.time.get_ticks()
  
     keys = pygame.key.get_pressed()  # checking pressed keys
     if pygame.time.get_ticks() > lasttime + interval_init:
         interval_init = 0
-        if pygame.time.get_ticks() > lasttime + interval:
+        if ARR == 0:
+            if keys[pygame.K_LEFT]:
+                game.left(100)
+            if keys[pygame.K_RIGHT]:
+                game.right(100)
+            if keys[pygame.K_DOWN]:
+                game.soft_drop(1)
+            lasttime = pygame.time.get_ticks()
+        elif pygame.time.get_ticks() > lasttime + interval:
             if keys[pygame.K_LEFT]:
                 game.left()
             if keys[pygame.K_RIGHT]:
