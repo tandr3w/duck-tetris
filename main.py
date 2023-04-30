@@ -262,6 +262,7 @@ while running:
         screen.blit(duck, (randint(-600, 600), randint(-600, 600)))
         screen.blit(duck, (randint(-600, 600), randint(-600, 600)))
         screen.blit(duck, (randint(-600, 600), randint(-600, 600)))
+        screen.blit(duck, (randint(-600, 600), randint(-600, 600)))
     pygame.display.flip()
  
 pygame.quit()
